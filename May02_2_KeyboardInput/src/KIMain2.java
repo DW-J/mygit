@@ -36,22 +36,5 @@ public class KIMain2 {
 		
 		keyboard.close();
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 }
