@@ -1,0 +1,68 @@
+데이터베이스
+데이터들의 집합
+
+SQL이란?
+	Structured Query Language (구조적 질의 언어)의 줄임말
+	DBMS(데이터베이스 관리시스템)에서 데이터를 관리, 처리하기 위해 설계된 언어
+	DBMS = DataBase + Management System
+	질의한다? => 무엇을? =>구조화 되어있는 데이터를!
+
+데이터베이스는 대표적인 DBMS인 Oracle DB로
+-------------------------------------------------------------------------------------------------------------
+1. Oracle 설치
+- https://www.oracle.com/ 주소로 들어가서
+- 계정하나 만들어주세요
+- 검색란에 => 'xe prior' 검색 => 첫번째 결과로 들어가서
+- Oracle Database 11gR2 Express Edition for Windows x64 다운로드
+- 폴더 하나 만들어서 거기다 압축 풀고 설치
+- Next로 쭉 넘어가다보녀 Password 입력하라고 나옴
+- Password 입력하고, 어딘가에 잘 적어둘 것 => Next 누르고 설치
+- DB서버 잘 돌아가고 있나 확인
+- Windows 메뉴 - 서비스 - OracleServiceXE, OracleXETNSListener가 '실행중'이어야함
+---------------------------------------------------------------------------------------------
+2. 원격 접속이 되는 관리자 계정 만들기
+	cmd열어서 sqlplus / as sysdba
+	sqlplus 	: (oracleDB 접속 프로그램명)
+	/	: (현재 로그인 한 OS의 계정을 쓰겠다는 의미)
+	as sysdba : 최상위 관리자의 권한으로
+
+	create user [ID명] identified by [비밀번호];
+	grant connect, resource, dba to [id명]
+	=> 성공하면 각각 User created. / Grant secceeded. 라는 문구가 나옴
+---------------------------------------------------------------------------------------------
+DB서버에 관리자로 접속 => 자기 자신의 계정을 만들기 위해서
+oracleDB에 접속하려면 instant client가 필요
+	1. 검색란에 instant client 검색
+	2. 두번째 결과 들어가기
+	3.  Instant Client for Microsoft Windows (x64) 64-bit 클릭
+	4. 21.14.0.0.0 버전 
+	basic, sqlplus, jdbc 를 받아서 한구데에 압축해제(oracle.com에서 다운)
+압축해제하 폴더로 들어가서 cmd
+	[sqlplus ID/비번@IP:포트번호/SID]
+	ID : 관리자(DBA) 계정 ID = qwer
+ 	PW : 관리자(DBA) 계정 PW = 1234
+	IP : 관리자(DBA) 계정 IP / CMD에서 ipconfig쳐서 IPv4 주소값 확인
+	포트번호 : 1521
+	SID : xe
+	
+	IPv4 주소 . . . . . . . . . : 192.168.0.63
+
+	- 새계정 생성
+	create user [ID] identified by [비번];
+	
+	grant connect, resource to [ID];
+
+폴더 하나 생성 (한글 X)
+
+
+
+
+
+
+
+
+
+
+
+
+
