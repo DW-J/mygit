@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		<table>
+			기본 : <tr>, <th>, <td>
+			tr은 'table row'의 약자로, 테이블의 행을 표현함
+			td는 'table data'의 약자로, 테이블에 들어가는 데이터, 셀을 의미함
+			즉, 하나의 <table>안에 <tr> 태그로 행을 표현하고,
+				그 안에 <td> 태그를 이용해서 데이터를 표현하는 것
+			th는 'table header'의 약자로 테이블의 타이틀을 표현함
+			
+			속성 : border, width, height (table)
+					align, valign (정렬방법 td, th)
+					colspan, rowspan (칸 합병, td)
+	-->
+	<table border="1" width="300px" height="300px">
+		<tr>
+			<td align="center">1</td>
+			<td align="center">2</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">4</td>
+		</tr>
+	</table>
+		<hr>
+	<table border="1" width="300px" height="300px">
+		<tr>
+			<td align="center">ㄱ</td>
+			<td valign="top" align="center">ㄹ</td>
+		</tr>
+		<tr>
+			<td valign="top" align="center">ㄴ</td>
+			<td valign="bottom" align="center">ㅁ</td>
+		</tr>
+		<tr>
+			<td valign="top" align="right">ㄷ</td>
+			<td align="left" valign="bottom">ㅂ</td>
+		</tr>
+	</table>
+	<hr>
+	
+	<!-- 
+		셀을 가로로 합병하려면 1열, 2열 을 합병해야하니 colspan
+		셀을 세로로 합병하려면 1행, 2행 을 합병해야하니 rowspan
+	-->
+	<table border="1" width="300px" height="300px">
+		<tr>
+			<td colspan="2">1</td>
+			<td rowspan="2">3</td>
+		</tr>
+		<tr>
+			<td rowspan="2">4</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td colspan="2">8</td>
+		</tr>
+	</table>
+	
+	<table border="1" width="300px" height="300px">
+		<tr>
+			<td colspan="2" width="200px" height="100px">1</td>
+			<td rowspan="2" width="100px" height="200px">3</td>
+		</tr>
+		<tr>
+			<td rowspan="2" width="100px" height="200px">4</td>
+			<td >
+				<table border="1" width="100px" height="100px">
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" width="200px" height="100px">8</td>
+		</tr>
+	</table>
+	<table border="1" width="300px" height="300px">
+		<tr>
+			<td colspan="2" align="center">오</td>
+			<td rowspan="2" >늘</td>
+		</tr>
+		<tr>
+			<td rowspan="2" >업</td>
+			<td >
+				<table border="1" width="90%" height="90%">
+					<tr>
+						<td align="center">여</td>
+						<td align="center">기</td>
+					</tr>
+					<tr>
+						<td align="center">지</td>
+						<td align="center">까</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">수</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
