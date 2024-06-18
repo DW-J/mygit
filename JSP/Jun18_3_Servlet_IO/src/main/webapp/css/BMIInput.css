@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+	margin-left: 0px;
+	margin-right: 0px 
+}
+
+#bmiTbl {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	border: white solid 5px;
+}
+
+
+#bmiTbl td{
+	width: 50%;
+	font-size: 20pt;
+	text-shadow: white 3px 5px 5px;
+}
+
+#bmiTbl .textType::focus {
+	font-size: 25pt;
+	color: skyblue;
+}
+#bmiTbl .textType::placeholder {
+	color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
