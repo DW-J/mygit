@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/PiusValidChecker.js"></script>
+<script type="text/javascript" src="js/Jun20_Check.js"></script>
+<link rel="stylesheet" href="css/BMIInput.css">
+</head>
+<body>
+	<!--  
+		form + table 활용
+		BMI 검사
+		bmi : 몸무게 / (키 * 키) -- 키는 m단위
+			bmi가 18.5미만이면 저체중
+			18.5이상이라면 정상
+			25이상이면 과체중
+			30아싱이면 경도비만
+			35아싱이면 중증도비만
+			40아싱이면 고도비만
+			
+		(이름, 키(cm), 몸무게(kg), 사진) => 버튼을 누르면
+			=> 유효성 검사 실시 => 유효한 데이터라면...
+			=> 	이름, 키, 몸무게, bmi수치, 결과, 사진 을 servlet으로 출력
+			+ html(+CSS) / servlet(CSS X)_
+	-->
+	<form action="HomeController" method="post" enctype="multipart/form-data" 
+		name="bmiForm" onsubmit="return bmiCheck();">
+		<table id="bmiTbl">
+			<tr>
+				<td colspan="2" align="center" class="Td">BMI 검사</td>
+			</tr>
+			<tr>
+				<td align="center" class="td1">이름</td>
+				<td>
+					<input autofocus="autofocus" name="name" placeholder="필수" class="textType">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="td1">키</td>
+				<td>
+					<input autofocus="autofocus" name="height" placeholder="cm" class="textType">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="td1">몸무게</td>
+				<td>
+					<input autocomplete="off" name="weight" placeholder="kg" class="textType">
+				</td>
+			</tr>
+			<tr>
+				<td align="center" class="td1">사진</td>
+				<td>	
+					<input  name="photo" type="file" class="photoType" id="photo"> 
+				</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2">
+					<button>계산하기</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
