@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+
+body {
+	background-image: url("css/bluesky.jpg");
+	background-repeat: no-repeat;
+	background-position: top;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	font-family: "bandi";
+}
+
+#siteTitle {
+	color: purple;
+	font-size: 40pt;
+	
+}

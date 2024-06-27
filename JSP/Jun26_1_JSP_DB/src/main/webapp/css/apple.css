@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body {
+	background-color: teal;
+	margin: 0px;
+	padding: 0px;
+	border: thin;
+}
+
+#appleBoard {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "bandi";
+	font-size: 40pt;
+	color: white;
+	padding: 40px; 
+}
