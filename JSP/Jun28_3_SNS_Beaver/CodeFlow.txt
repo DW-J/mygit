@@ -1,0 +1,39 @@
+HomeController
+	HomeController의 doGet 메서드 호출
+	MemberDAO.loginCheck(request)를 호출하여 현재 로그인 상태를 확인
+	로그인 상태에 따라 lp 속성을 설정 (member/welcome.jsp OR member/login.jsp)
+	request.setAttribute("cp", "home.jsp")를 통해 cp 속성을 home.jsp로 설정
+	request.getRequestDispatcher("index.jsp").forward(request, response)를 통해 요청을 index.jsp로 포워딩
+
+회원가입 (SingupController)
+1. GET 요청(login.jsp의 Sign Up버튼 / go.js의 signUpgo(); 함수 호출)
+	SignupController의 doGet 메서드가 호출
+	MemberDAO.loginCheck(request)를 호출하여 현재 로그인 상태를 확인
+	DateManager.getCurYear(request)를 호출하여 현재 연도를 설정(CY값 어트리뷰트)
+	request.setAttribute("cp", "member/signup.jsp")를 통해 cp 속성을 signup.jsp로 설정
+	request.getRequestDispatcher("index.jsp").forward(request, response)를 통해 요청을 index.jsp로 포워딩
+
+2. POST 요청(signup.jsp의 Sign Up버튼(form action = SignupController method = post))
+	사용자가 회원가입 폼을 제출하면 POST 요청이 발생
+	SignupController의 doPost 메서드가 호출
+	MemberDAO.signUp(request)를 호출하여 회원 정보를 데이터베이스에 저장
+	MemberDAO.loginCheck(request)를 호출하여 현재 로그인 상태를 확인
+	request.setAttribute("cp", "home.jsp")를 통해 cp 속성을 home.jsp로 설정
+	request.getRequestDispatcher("index.jsp").forward(request, response)를 통해 요청을 index.jsp로 포워딩
+
+로그인 / 로그아웃
+1. GET 요청(로그아웃 / welcome.jsp의 로그아웃 버튼 / go.js의 logout(); 함수 호출) 
+	사용자가 로그아웃을 요청하면 GET 요청이 발생
+	LoginController의 doGet 메서드가 호출
+	MemberDAO.logout(request)를 호출하여 세션을 무효화
+	MemberDAO.loginCheck(request)를 호출하여 현재 로그인 상태를 확인
+	request.setAttribute("cp", "home.jsp")를 통해 cp 속성을 home.jsp로 설정
+	request.getRequestDispatcher("index.jsp").forward(request, response)를 통해 요청을 index.jsp로 포워딩
+
+2. POST 요청(로그인 / login.jsp의 Login 버튼(form action = LoginController method = post))
+	사용자가 로그인 폼을 제출하면 POST 요청이 발생
+	LoginController의 doPost 메서드가 호출
+	MemberDAO.login(request, response)를 호출하여 사용자 인증을 처리
+	MemberDAO.loginCheck(request)를 호출하여 현재 로그인 상태를 확인
+	request.setAttribute("cp", "home.jsp")를 통해 cp 속성을 home.jsp로 설정
+	request.getRequestDispatcher("index.jsp").forward(request, response)를 통해 요청을 index.jsp로 포워딩
