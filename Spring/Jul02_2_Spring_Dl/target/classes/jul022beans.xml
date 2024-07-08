@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="d" class="com.pius.jul022.dog.Dog"></bean>
+
+	<bean id="d2" class="com.pius.jul022.dog.Dog">
+		<property name="name" value="개님"></property>
+		<property name="age" value="99"></property>
+	</bean>
+	<bean id="d3" class="com.pius.jul022.dog.Dog">
+		<constructor-arg value="개느님"></constructor-arg>
+		<constructor-arg value="999"></constructor-arg>
+	</bean>
+	<bean id="b1" class="com.pius.jul022.book.Book">
+		<constructor-arg value="어린왕자" name="name"></constructor-arg>
+		<constructor-arg value="7500" name="price"></constructor-arg>
+	</bean>
+	<bean id="b2" class="com.pius.jul022.book.Book">
+		<property name="name" value="죄와 벌"></property>
+		<property name="price" value="9500"></property>
+	</bean>
+</beans>
