@@ -1,0 +1,56 @@
+{
+	"documents": [
+		{
+			"address_name": "서울 강남구 역삼동 619-3",
+			"category_group_code": "FD6",
+			"category_group_name": "음식점",
+			"category_name": "음식점 \u003e 퓨전요리 \u003e 퓨전일식",
+			"distance": "3",
+			"id": "1804968253",
+			"phone": "02-555-1995",
+			"place_name": "미도인 강남",
+			"place_url": "http://place.map.kakao.com/1804968253",
+			"road_address_name": "서울 강남구 강남대로102길 16",
+			"x": "127.027187506638",
+			"y": "37.5021014097588"
+		},
+		{
+			"address_name": "서울 강남구 역삼동 825-2",
+			"category_group_code": "",
+			"category_group_name": "",
+			"category_name": "금융,보험 \u003e 금융서비스 \u003e 보험사 \u003e 손해보험",
+			"distance": "573",
+			"id": "8892468",
+			"phone": "02-563-6122",
+			"place_name": "미도인스코",
+			"place_url": "http://place.map.kakao.com/8892468",
+			"road_address_name": "서울 강남구 강남대로 382",
+			"x": "127.02862185312858",
+			"y": "37.497040119326215"
+		},
+		{
+			"address_name": "서울 강남구 역삼동 825-2",
+			"category_group_code": "",
+			"category_group_name": "",
+			"category_name": "금융,보험 \u003e 금융서비스 \u003e 보험사 \u003e SGI서울보증",
+			"distance": "571",
+			"id": "1519492387",
+			"phone": "02-563-6122",
+			"place_name": "SGI서울보증 미도인스코대리점",
+			"place_url": "http://place.map.kakao.com/1519492387",
+			"road_address_name": "서울 강남구 강남대로 382",
+			"x": "127.028627510825",
+			"y": "37.4970491280208"
+		}
+	],
+	"meta": {
+		"is_end": true,
+		"pageable_count": 3,
+		"same_name": {
+			"keyword": "미도인",
+			"region": [],
+			"selected_region": ""
+		},
+		"total_count": 3
+	}
+}
